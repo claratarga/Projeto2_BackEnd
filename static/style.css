@@ -1,3 +1,6 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,145 +9,341 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
+    background-color: #F5F7FB;
+    color: #263247;
+    min-height: 100vh;
+    line-height: 1.6;
 }
 
+/* CABEÇALHO */
+
 header {
-    background-color: #292929;
-    color: white;
-    text-align: center;
-    padding: 30px;
+    background-color: #FFFFFF;
+    min-height: 85px;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E8EDF4;
 }
 
 header h1 {
-    margin-bottom: 8px;
+    font-size: 25px;
+    color: #263247;
+    letter-spacing: -1px;
+}
+
+header h1 span {
+    color: #4778E6;
+}
+
+header p {
+    color: #8490A3;
+    font-size: 13px;
 }
 
 header a {
-    color: white;
+    color: #4778E6;
     text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
 }
 
-nav {
-    margin-top: 10px;
+header a:hover {
+    color: #2858C5;
 }
+
+/* CONTEÚDO PRINCIPAL */
 
 main {
     width: 90%;
-    max-width: 700px;
-    margin: 30px auto;
+    max-width: 1000px;
+    margin: 45px auto;
 }
 
-section {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-}
+/* TÍTULOS */
 
 h2 {
-    margin-bottom: 15px;
+    font-size: 21px;
+    color: #263247;
+    margin-bottom: 18px;
+    letter-spacing: -0.5px;
 }
 
-input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
+h3 {
+    color: #263247;
+    font-size: 16px;
 }
+
+/* SEÇÕES E CARTÕES */
+
+section {
+    background-color: #FFFFFF;
+    padding: 28px;
+    border: 1px solid #E7ECF3;
+    border-radius: 14px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 15px rgba(30, 50, 80, 0.04);
+}
+
+/* PÁGINA INICIAL */
+
+#area-login,
+#area-cadastro {
+    min-width: 0;
+}
+
+#area-login h2,
+#area-cadastro h2 {
+    margin-bottom: 20px;
+}
+
+#area-login,
+#area-cadastro {
+    display: flex;
+    flex-direction: column;
+}
+
+#area-login {
+    grid-area: login;
+}
+
+#area-cadastro {
+    grid-area: cadastro;
+}
+
+main:has(#area-login) {
+    max-width: 850px;
+}
+
+main:has(#area-login) > #area-login,
+main:has(#area-login) > #area-cadastro {
+    display: none;
+}
+
+main:has(#area-login) > #area-postagem,
+main:has(#area-login) > #lista-postagens {
+    width: 100%;
+}
+
+/* CAMPOS */
+
+input,
+textarea {
+    width: 100%;
+    padding: 13px 15px;
+    margin-bottom: 16px;
+    border: 1px solid #E0E6EF;
+    border-radius: 9px;
+    background-color: #F9FAFC;
+    color: #263247;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #A1AABA;
+}
+
+input:focus,
+textarea:focus {
+    background-color: #FFFFFF;
+    border-color: #4778E6;
+    box-shadow: 0 0 0 3px rgba(71, 120, 230, 0.10);
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #526078;
+    margin-bottom: 6px;
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* BOTÕES */
 
 button {
-    background-color: #292929;
-    color: white;
+    padding: 12px 20px;
     border: none;
-    padding: 12px 18px;
-    border-radius: 5px;
+    border-radius: 9px;
+    background-color: #4778E6;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 button:hover {
-    background-color: #444;
+    background-color: #315FC9;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* POSTAGENS */
+
+#area-postagem {
+    display: none;
+}
+
+#area-postagem button {
+    margin-right: 8px;
+}
+
+#lista-postagens {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.postagem {
+    background-color: #FFFFFF;
+    padding: 23px;
+    margin-bottom: 16px;
+    border: 1px solid #E7ECF3;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(30, 50, 80, 0.03);
+}
+
+.postagem strong {
+    display: block;
+    color: #4778E6;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.postagem p {
+    color: #46536A;
+    overflow-wrap: anywhere;
+    margin-bottom: 12px;
+}
+
+.postagem small {
+    color: #98A3B3;
+    font-size: 12px;
+}
+
+/* LOGIN */
+
+main:has(#botao-login) {
+    max-width: 430px;
+}
+
+main:has(#botao-login) section {
+    padding: 35px;
+}
+
+#mensagem-login {
+    margin-top: 15px;
+    font-size: 13px;
+    text-align: center;
+    color: #526078;
+}
+
+/* PERFIL */
+
+#perfil {
+    text-align: center;
+    padding: 40px 25px;
+}
+
+#nome-usuario {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+#username {
+    color: #8490A3;
+    font-size: 14px;
+}
+
+/* BUSCA DE USUÁRIOS */
+
+#area-conta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#area-conta span {
+    color: #526078;
+    font-size: 13px;
+}
+
+#botao-logout {
+    background-color: #FCECEC;
+    color: #C44848;
+}
+
+#botao-logout:hover {
+    background-color: #F7DADA;
 }
 
 .usuario {
-    border-bottom: 1px solid #ddd;
-    padding: 15px 0;
+    padding: 18px 0;
+    border-bottom: 1px solid #E8EDF4;
 }
 
 .usuario:last-child {
     border-bottom: none;
 }
 
+.usuario p {
+    color: #8490A3;
+    font-size: 13px;
+}
+
 .usuario a {
     display: inline-block;
-    margin-top: 8px;
-    color: #333;
+    margin-top: 9px;
+    color: #4778E6;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
 }
 
-.postagem {
-    border-bottom: 1px solid #ddd;
-    padding: 15px 0;
+.usuario a:hover {
+    text-decoration: underline;
 }
 
-.postagem:last-child {
-    border-bottom: none;
-}
+/* RESPONSIVIDADE */
 
-#mensagem-login {
-    margin-top: 12px;
-}
+@media (max-width: 650px) {
+    header {
+        padding: 18px 5%;
+    }
 
-#area-conta span {
-    margin-right: 10px;
-}
+    main {
+        width: 92%;
+        margin: 25px auto;
+    }
 
-#area-conta {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 15px;
-}
+    section {
+        padding: 22px;
+    }
 
-#botao-logout {
-    background-color: #c0392b;
-    color: white;
-    font-weight: bold;
-    padding: 12px 24px;
-    border-radius: 6px;
-    border: 2px solid white;
-    cursor: pointer;
-}
+    header h1 {
+        font-size: 22px;
+    }
 
-#botao-logout:hover {
-    background-color: #962d22;
-    transform: scale(1.05);
-}
+    main:has(#botao-login) section {
+        padding: 25px;
+    }
 
-/* Tela de login */
-
-#login-username,
-#login-password {
-    margin-top: 8px;
-}
-
-section label {
-    display: block;
-    font-weight: bold;
-    margin-top: 12px;
-}
-
-#botao-login {
-    width: 100%;
-    margin-top: 10px;
-    font-size: 15px;
-    font-weight: bold;
-}
-
-#mensagem-login {
-    margin-top: 15px;
-    text-align: center;
+    #area-conta {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
 }
