@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - MiniBlog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>MiniBlog</h1>
+        <a href="/">Voltar à busca</a>
+    </header>
+
+    <main>
+        <section id="perfil">
+            <h2 id="nome-usuario">Carregando perfil...</h2>
+            <p id="username"></p>
+        </section>
+
+        <section>
+            <h2>Publicações</h2>
+            <div id="publicacoes"></div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='profile.js') }}"></script>
+</body>
+</html>

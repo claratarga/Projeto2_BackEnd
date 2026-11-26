@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniBlog - Usuários</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>MiniBlog</h1>
+        <nav id="area-conta">
+            <a href="/login">Entrar</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Buscar usuários</h2>
+
+            <input
+                type="text"
+                id="termo-busca"
+                placeholder="Digite um nome ou username"
+            >
+
+            <button id="botao-buscar">Buscar</button>
+
+            <div id="resultados"></div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='users.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MiniBlog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>MiniBlog</h1>
+        <a href="/">Voltar à busca</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Entrar na sua conta</h2>
+
+            <label for="login-username">Username</label>
+            <input
+                type="text"
+                id="login-username"
+                placeholder="Digite seu username"
+                autocomplete="username"
+            >
+
+            <label for="login-password">Senha</label>
+            <input
+                type="password"
+                id="login-password"
+                placeholder="Digite sua senha"
+                autocomplete="current-password"
+            >
+
+            <button id="botao-login">Entrar</button>
+
+            <p id="mensagem-login" role="status"></p>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='auth.js') }}"></script>
+</body>
+</html>

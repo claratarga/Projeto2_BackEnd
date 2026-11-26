@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+header {
+    background-color: #292929;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+main {
+    width: 90%;
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #292929;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+.usuario {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.usuario:last-child {
+    border-bottom: none;
+}
+
+.usuario a {
+    display: inline-block;
+    margin-top: 8px;
+    color: #333;
+}
+
+.postagem {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.postagem:last-child {
+    border-bottom: none;
+}
+
+#mensagem-login {
+    margin-top: 12px;
+}
+
+#area-conta span {
+    margin-right: 10px;
+}
+
+#area-conta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+#botao-logout {
+    background-color: #c0392b;
+    color: white;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+#botao-logout:hover {
+    background-color: #962d22;
+    transform: scale(1.05);
+}
+
+/* Tela de login */
+
+#login-username,
+#login-password {
+    margin-top: 8px;
+}
+
+section label {
+    display: block;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+#botao-login {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#mensagem-login {
+    margin-top: 15px;
+    text-align: center;
+}

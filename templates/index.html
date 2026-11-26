@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniBlog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>MiniBlog</h1>
+        <p>Compartilhe suas ideias.</p>
+    </header>
+
+    <main>
+        <section id="area-login">
+            <h2>Entrar</h2>
+
+            <input type="text" id="login-username" placeholder="Username">
+            <input type="password" id="login-senha" placeholder="Senha">
+
+            <button onclick="fazerLogin()">Entrar</button>
+        </section>
+
+        <section id="area-cadastro">
+            <h2>Criar conta</h2>
+
+            <input type="text" id="cadastro-nome" placeholder="Nome">
+            <input type="text" id="cadastro-username" placeholder="Username">
+            <input type="email" id="cadastro-email" placeholder="E-mail">
+            <input type="password" id="cadastro-senha" placeholder="Senha">
+
+            <button onclick="cadastrarUsuario()">Cadastrar</button>
+        </section>
+
+        <section id="area-postagem">
+            <h2>Nova postagem</h2>
+
+            <textarea id="conteudo-postagem" placeholder="O que você está pensando?"></textarea>
+
+            <button onclick="criarPostagem()">Publicar</button>
+            <button onclick="fazerLogout()">Sair</button>
+        </section>
+
+        <section id="lista-postagens">
+            <h2>Postagens recentes</h2>
+            <div id="postagens"></div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
