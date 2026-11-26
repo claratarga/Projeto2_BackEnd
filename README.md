@@ -1,25 +1,21 @@
-MiniBlog - Projeto 2
+# MiniBlog - Projeto 2
 
 Projeto desenvolvido para a disciplina de Programação Web Back-End, do curso de Sistemas de Informação da UTFPR.
 
 O MiniBlog é uma aplicação web que permite consultar usuários, visualizar perfis e publicações, além de realizar autenticação de usuários.
 
-Tecnologias utilizadas
+## Tecnologias utilizadas
 
-Python
+- Python
+- Flask
+- MySQL
+- HTML
+- CSS
+- JavaScript
 
-Flask
+## Estrutura do projeto
 
-MySQL
-
-HTML
-
-CSS
-
-JavaScript
-
-Estrutura do projeto
-
+```text
 Projeto2_BackEnd/
 ├── app.py
 ├── config.py
@@ -29,61 +25,65 @@ Projeto2_BackEnd/
 ├── routes/
 ├── templates/
 └── static/
+```
 
-Funcionalidades
+## Funcionalidades
 
-Busca de usuários por nome ou username.
+- Busca de usuários por nome ou username.
+- Consulta de perfil de usuário.
+- Visualização das publicações de cada usuário.
+- Login e logout.
+- Controle de sessão.
+- Proteção CSRF nas operações de autenticação.
 
-Consulta de perfil de usuário.
+## Como executar o projeto
 
-Visualização das publicações de cada usuário.
+1. Clone o repositório:
 
-Login e logout.
-
-Controle de sessão.
-
-Proteção CSRF nas operações de autenticação.
-
-Como executar o projeto
-
-Clone o repositório:
-
+```bash
 git clone https://github.com/claratarga/Projeto2_BackEnd.git
+```
 
-Entre na pasta:
+2. Entre na pasta:
 
+```bash
 cd Projeto2_BackEnd
+```
 
-Crie e ative o ambiente virtual:
+3. Crie e ative o ambiente virtual:
 
+```bash
 python -m venv venv
+```
 
 No Windows:
 
+```powershell
 venv\Scripts\activate
+```
 
-Instale as dependências:
+4. Instale as dependências:
 
+```bash
 pip install Flask mysql-connector-python
+```
 
-Configure as variáveis de ambiente:
+5. Configure as variáveis de ambiente:
 
-DB_HOST: endereço do banco de dados.
+- `DB_HOST`: endereço do banco de dados.
+- `DB_USER`: usuário do MySQL.
+- `DB_PASSWORD`: senha do MySQL.
+- `DB_NAME`: nome do banco de dados.
+- `SECRET_KEY`: chave secreta da aplicação.
 
-DB_USER: usuário do MySQL.
+6. Execute a aplicação:
 
-DB_PASSWORD: senha do MySQL.
-
-DB_NAME: nome do banco de dados.
-
-SECRET_KEY: chave secreta da aplicação.
-
-Execute a aplicação:
-
+```bash
 python app.py
+```
 
-A aplicação estará disponível em http://127.0.0.1:5000.
+A aplicação estará disponível em `http://127.0.0.1:5000`.
 
-Autoria
+## Autoria
 
 Projeto acadêmico desenvolvido em dupla para a disciplina de Programação Web Back-End.
